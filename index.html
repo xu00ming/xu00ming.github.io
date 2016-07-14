@@ -369,12 +369,14 @@ var timer = null;
 			div.style.height=height+"px"; 
 			div.className="div"; 
 			document.getElementById("snowzone").appendChild(div); 
+		}
+
 				setTimeout(function(){ 
 					oSnow.removeChild(div); 
 			// console.log(window.innerHeight); 
 				},5000); 
 
-		}	
+			
 		
 			timer = setInterval(function(){ 
 				// var left = Math.random()*window.innerWidth; 
