@@ -8,21 +8,38 @@
 <link rel="stylesheet" type="text/css" href="stylesheets/common.css"/>
 <style type="text/css">
 /*header开始*/
+/*body{background: url(images/b_1.jpg); background-size: 100%;}*/
+body{background:#000; background-size: 100%;}
 #box{width:100%; height: 100%;  position: relative;}
 #page{width:100%; position: absolute; top:0; left: 0; }
-.banner{width:100%; height:100%;background: url(images/b_1.jpg) no-repeat; background-attachment: fixed; position: relative;}
-.banner #clock{width:200px; height:200px; position:absolute; left:80%; top:3%; margin-left:-105px; border:10px solid #fff; border-radius:50%; opacity:0.7; box-shadow: 0px 0px 10px #000; 
+.banner{width:100%; height:100%; position: relative; 
+	-webkit-transform: perspective(800px) rotateX(70deg);
+	-moz-transform: perspective(800px) rotateX(70deg);
+	-ms-transform: perspective(800px) rotateX(70deg);
+	transform: perspective(800px) rotateX(70deg);
+	-webkit-transition: 3s all ease;
+	-webkit-transition: 3s all ease;
+	-webkit-transition: 3s all ease;
+	-webkit-transition: 3s all ease;
+	-webkit-transform-origin: bottom;
+	-webkit-transform-origin: bottom;
+	-webkit-transform-origin: bottom;
+	-webkit-transform-origin: bottom;
+}
+
+
+.banner #clock{width:200px; height:200px; position:absolute; left:80%; top:3%; margin-left:-105px; border:10px solid #fff; border-radius:50%; opacity:1; box-shadow: 0px 0px 10px #000; 
 	-webkit-transition: 1s all ease;
 	-moz-transition: 1s all ease;
 	-ms-transition: 1s all ease;
 	transition: 1s all ease;
 }
 .banner #clock:hover{-webkit-transform: rotate(360deg);-moz-transform: rotate(360deg);-ms-transform: rotate(360deg);transform: rotate(360deg);}
-.banner #bgcolor{width:200px;height:200px; border-radius: 50%; background: yellow;opacity: 0.1;}
+.banner #bgcolor{width:200px;height:200px; border-radius: 50%; background: #fff;opacity: 0.1;}
 .banner #hou{ width:8px; height:60px; background:#fff; position:absolute; left:50%; top:40px; margin-left:-4px; border-radius:50% 50% 0 0; -webkit-transform-origin:center bottom;
 	-moz-transform-origin:center bottom;
 	-ms-transform-origin:center bottom;
-	transform-origin:center bottom; 
+	-webkit-transform-origin:center bottom; 
 }
 .banner #min{width:6px; height:70px; background:#fff; position:absolute; left:50%; top:30px; margin-left:-3px; border-radius:50% 50% 0 0;
  	-webkit-transform-origin:center bottom;
@@ -30,16 +47,16 @@
 	-ms-transform-origin:center bottom;
 	transform-origin:center bottom; 
 }
-.banner #sec{width:4px; height:80px; background:yellow; position:absolute; left:50%; top:20px; margin-left:-2px; border-radius:50% 50% 0 0; -webkit-transform-origin:center bottom;
+.banner #sec{width:4px; height:80px; background:#fff; position:absolute; left:50%; top:20px; margin-left:-2px; border-radius:50% 50% 0 0; -webkit-transform-origin:center bottom;
 	-moz-transform-origin:center bottom;
 	-ms-transform-origin:center bottom;
 	transform-origin:center bottom; 
 }
 .banner #cap{ width:16px; height:16px; position:absolute; left:50%; top:50%; margin-left:-8px; margin-top:-8px; border-radius:50%;
-	background: -webkit-radial-gradient(#ccc,#00f);
+	background: -webkit-radial-gradient(#ccc,#000);
 	background: -moz-radial-gradient(#fff,#000);
 	background: -ms-radial-gradient(#fff,#000);
-	background: radial-gradient(#ccc,#00f);
+	background: radial-gradient(#ccc,#000);
 }
 /*.banner #clock:hover{-webkit-transform: translateZ(10px); box-shadow: 0px 0px 50px 50px #000; opacity: 0.5}*/
 /*.banner #clock:hover #hou,#min,#sec{-webkit-transform: translateZ(10px); box-shadow: 0px 0px 20px #000; }*/
@@ -52,7 +69,7 @@
 .banner span.big_scale{width:4px; height:12px; margin-left:-3px;}
 .banner span em{position:absolute; top:15px; font-style:normal; width:24px; left:50%; margin-left:-12px; text-align:center; font-size:18px; font-weight:bold;color:#fff;}
 
-#page1 .nav ul{width:100px; height:400px; background: #000; z-index: 10; position: fixed; right:10%; padding-top: 40px; top:30%; opacity: 0.6;
+#page1 .nav ul{width:100px; height:400px; background: none; z-index: 10; position: fixed; right:6%; padding-top: 40px; top:30%; opacity: 1;
 	-webkit-transform:perspective(200px) rotateY(-30deg);
 	-moz-transform:perspective(200px) rotateY(-30deg);
 	-ms-transform:perspective(200px) rotateY(-30deg);
@@ -62,7 +79,7 @@
 	-ms-transition: 0.2s all ease;
 	transition: 0.2s all ease;
 }
-#page .nav ul li a{height:50px; width:95px;color:#fff; font: 20px/50px 'microsoft yahei'; text-align: center; display: block; margin-top: 20px; /*background: #01e;*/ border-radius:10px; box-shadow: 5px 3px 10px yellow;
+#page .nav ul li a{height:50px; width:95px;color:#000; font:bold 20px/50px 'microsoft yahei'; text-align: center; display: block; margin-top: 20px; background: #ccc; /*border-radius:10px;*/ box-shadow: 5px 3px 10px #ccc;
 	-webkit-transition: 0.8s all ease;
 	-moz-transition: 0.8s all ease;
 	-ms-transition: 0.8s all ease;
@@ -72,27 +89,317 @@
 	-ms-transform: translateZ(30px);
 	transform: translateZ(30px);
 }
-#page .nav ul li .a1{background:#005;
-	box-shadow: 5px 3px 10px 10px yellow;
+#page .nav ul li .a1{background:#333; color:#fff;
+	box-shadow: 5px 3px 10px 10px #ccc;
 }
-#page .nav ul:active{ 
+#page .nav ul:active { 
 	-webkit-transform:perspective(200px) rotateY(-20deg);
 	-moz-transform:perspective(200px) rotateY(-20deg);
 	-ms-transform:perspective(200px) rotateY(-20deg);
 	transform:perspective(200px) rotateY(-20deg);
 }
-#page .nav ul .active{background:#005;}
+#page .nav ul .active{background:#333; color:#fff;}
+/*小人*/
+/*.containerbox {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+
+  
+}*/
+.person {
+  position: absolute;
+  height: 75px;
+  width: 0;
+  color: #fff;
+  left: 150px;
+  top: 159px;
+  transform-origin: 50% 50% 0px;
+  -webkit-transform-origin: 50% 50% 0px;
+  -moz-transform-origin: 50% 50% 0px;
+  -ms-transform-origin: 50% 50% 0px;
+  -webkit-animation: sprint 10s infinite ease-in;
+  -moz-animation: sprint 10s infinite ease-in;
+  -ms-animation: sprint 10s infinite ease-in;
+  animation: sprint 10s infinite ease-in;
+}
+.person .head:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -6px;
+  height: 2.7px;
+  width: 42px;
+  border-radius: 20%;
+  border: 4px solid white;
+  background-color: #fff;
+  -webkit-transform-origin: 50% 100% 0px;
+  -moz-transform-origin: 50% 100% 0px;
+  -ms-transform-origin: 50% 100% 0px;
+  transform-origin: 50% 100% 0px;
+  z-index: 90;
+}
+.person .head {
+  position: absolute;
+  top: -30px;
+  left: -6px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 4px solid white;
+  -webkit-transform-origin: 50% 100% 0px;
+  -ms-transform-origin: 50% 100% 0px;
+  -moz-transform-origin: 50% 100% 0px;
+  transform-origin: 50% 100% 0px;
+  z-index: 90;
+  -webkit-animation: bob 2s infinite alternate;
+  -moz-animation: bob 2s infinite alternate;
+  -ms-animation: bob 2s infinite alternate;
+  animation: bob 2s infinite alternate;
+}
+.person .head:after {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 9px;
+  height: 12px;
+  width: 15px;
+  border-radius: 30%;
+  border: 4px solid white;
+  background-color: #fff;
+  z-index: 90;
+}
+.person .torso {
+  position: absolute;
+  height: 60px;
+  width: 0;
+  border-left: 2px solid white;
+  left: 0px;
+  top: 15px;
+  z-index: 90;
+}
+.person .part {
+  position: absolute;
+  left: 0;
+  top: 75px;
+  z-index: 90;
+}
+.person .part.arm {
+  position: absolute;
+  border-left: 3px solid white;
+  border-bottom: 3px solid white;
+  height: 45px;
+  width: 39px;
+  top: 15px;
+  right: 300px;
+  -webkit-transform-origin: 0% 0% 0px;
+  -moz-transform-origin: 0% 0% 0px;
+  -ms-transform-origin: 0% 0% 0px;
+  transform-origin: 0% 0% 0px;
+  -webkit-animation: pump 1s infinite ease-in-out;
+  -moz-animation: pump 1s infinite ease-in-out;
+  -ms-animation: pump 1s infinite ease-in-out;
+  animation: pump 1s infinite ease-in-out;
+}
+.person .part.arm.one {
+  transform: rotate3d(0, 0, 1, -90deg);
+  -webkit-transform: rotate3d(0, 0, 1, -90deg);
+  -moz-transform: rotate3d(0, 0, 1, -90deg);
+  -ms-transform: rotate3d(0, 0, 1, -90deg);
+}
+.person .part.arm.two {
+  transform: rotate3d(0, 0, 1, -90deg);
+  -webkit-transform: rotate3d(0, 0, 1, -90deg);
+  -moz-transform: rotate3d(0, 0, 1, -90deg);
+  -ms-transform: rotate3d(0, 0, 1, -90deg);
+  -webkit-animation-delay: .5s;
+  -ms-animation-delay: .5s;
+  -moz-animation-delay: .5s;
+  animation-delay: .5s;
+}
+.person .part.leg {
+  height: 57px;
+  width: 60px;
+  border-right: 3px solid white;
+  border-top: 3px solid white;
+ -webkit-animation: run 1s infinite ease-in;
+  -moz-animation: run 1s infinite ease-in;
+  -ms-animation: run 1s infinite ease-in;
+  animation: run 1s infinite ease-in;
+  -webkit-transform-origin: 0% 0% 0px;
+  -moz-transform-origin: 0% 0% 0px;
+  -ms-transform-origin: 0% 0% 0px;
+  transform-origin: 0% 0% 0px;
+}
+.person .part.leg.one {
+  -webkit-transform: rotate3d(0, 0, 1, 90deg);
+  -moz-transform: rotate3d(0, 0, 1, 90deg);
+  -ms-transform: rotate3d(0, 0, 1, 90deg);
+  transform: rotate3d(0, 0, 1, 90deg);
+}
+.person .part.leg.two {
+  -webkit-transform: rotate3d(0, 0, 1, 80deg);
+  -moz-transform: rotate3d(0, 0, 1, 80deg);
+  -ms-transform: rotate3d(0, 0, 1, 80deg);
+  transform: rotate3d(0, 0, 1, 80deg);
+  -webkit-animation-delay: .5s;
+  -moz-animation-delay: .5s;
+  -ms-animation-delay: .5s;
+  animation-delay: .5s;
+}
+.person .part .foot {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 3px;
+  height: 3px;
+  background-color: #ffffff;
+  z-index: 900;
+  border: 3px solid red;
+}
+@keyframes run {
+  0% {
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+  50% {
+    transform: rotate3d(0, 0, 1, 150deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+}
+@-moz-keyframes run {
+  0% {
+    -moz-transform: rotate3d(0, 0, 1, -5deg);
+  }
+  50% {
+    -moz-transform: rotate3d(0, 0, 1, 150deg);
+  }
+  100% {
+    -moz-transform: rotate3d(0, 0, 1, -5deg);
+  }
+}
+@keyframes bob {
+  0% {
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+  25% {
+    transform: rotate3d(0, 0, 1, -30deg) skew(15deg, 0deg);
+  }
+  50% {
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+  75% {
+    transform: rotate3d(0, 0, 1, -30deg) skew(15deg, 0deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 1, 20deg) skew(-15deg, 0deg);
+  }
+}
+@-moz-keyframes bob {
+  0% {
+    -moz-transform: rotate3d(0, 0, 1, 5deg);
+  }
+  25% {
+    -moz-transform: rotate3d(0, 0, 1, -30deg) skew(15deg, 0deg);
+  }
+  50% {
+    -moz-transform: rotate3d(0, 0, 1, 5deg);
+  }
+  75% {
+    -moz-transform: rotate3d(0, 0, 1, -30deg) skew(15deg, 0deg);
+  }
+  100% {
+    -moz-transform: rotate3d(0, 0, 1, 20deg) skew(-15deg, 0deg);
+  }
+}
+@keyframes pump {
+  0% {
+    transform: rotate3d(0, 0, 1, 80deg);
+  }
+  50% {
+    transform: rotate3d(0, 0, 1, -70deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 1, 80deg);
+  }
+}
+@-moz-keyframes pump {
+  0% {
+    -moz-transform: rotate3d(0, 0, 1, 80deg);
+  }
+  50% {
+    -moz-transform: rotate3d(0, 0, 1, -70deg);
+  }
+  100% {
+    -moz-transform: rotate3d(0, 0, 1, 80deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate3d(0, 0, 1, -180deg);
+  }
+  25% {
+    transform: rotate3d(0, 0, 1, -100deg);
+  }
+  75% {
+    transform: rotate3d(0, 0, 1, 100deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 1, 180deg);
+  }
+}
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate3d(0, 0, 1, -180deg);
+  }
+  25% {
+    -moz-transform: rotate3d(0, 0, 1, -100deg);
+  }
+  75% {
+    -moz-transform: rotate3d(0, 0, 1, 100deg);
+  }
+  100% {
+    -moz-transform: rotate3d(0, 0, 1, 180deg);
+  }
+}
+@keyframes sprint {
+  0% {
+    transform-origin: 50% 50% 0px;
+    transform: translate(150px, 0px);
+  }
+  100% {
+    transform: translate(200px, 0px);
+    transform-origin: 50% 50% 0px;
+    transform: translate(850px, 0px);
+  }
+}
+@-moz-keyframes sprint {
+  0% {
+    -moz-transform-origin: 50% 50% 0px;
+    -moz-transform: translate(200px, 0px);
+  }
+  100% {
+    -moz-transform: translate(200px, 0px);
+    -moz-transform-origin: 50% 50% 0px;
+    -moz-transform: translate(800px, 0px);
+  }
+}
+
+
+
+
 
 /*联系方式*/
-#page #contact{width:900px; height: 70px; position: fixed; top:0; left: 4%; opacity: 0.8;
-	background:-webkit-linear-gradient(45deg,rgba(20,0,50,1) 100px,rgba(0,0,0,1) 250px,rgba(0,0,0,1) 350px,rgba(20,0,50,1) 600px,rgba(0,0,0,1) 900px);
+#page #contact{width:900px; height: 50px; position: fixed; top:0; left: 6%; opacity: 1;background:url(images/contactbg2.png) repeat-x;/* border-radius:0 0 15px 15px;*/ z-index: 999;
+	/*background:-webkit-linear-gradient(45deg,rgba(20,0,50,1) 100px,rgba(0,0,0,1) 250px,rgba(0,0,0,1) 350px,rgba(20,0,50,1) 600px,rgba(0,0,0,1) 900px);
 	background:-moz-linear-gradient(45deg,rgba(20,0,50,1) 100px,rgba(0,0,0,1) 250px,rgba(0,0,0,1) 350px,rgba(20,0,50,1) 600px,rgba(0,0,0,1) 900px);
 	background:-ms-linear-gradient(45deg,rgba(20,0,50,1) 100px,rgba(0,0,0,1) 250px,rgba(0,0,0,1) 350px,rgba(20,0,50,1) 600px,rgba(0,0,0,1) 900px);
-	background:linear-gradient(45deg,rgba(20,0,50,1) 100px,rgba(0,0,0,1) 250px,rgba(0,0,0,1) 350px,rgba(20,0,50,1) 600px,rgba(0,0,0,1) 900px);
+	background:linear-gradient(45deg,rgba(20,0,50,1) 100px,rgba(0,0,0,1) 250px,rgba(0,0,0,1) 350px,rgba(20,0,50,1) 600px,rgba(0,0,0,1) 900px);*/
 	-webkit-transform:perspective(800px) rotateX(60deg) translate(0,-70px);
 	-moz-transform:perspective(800px) rotateX(60deg) translate(0,-70px);
 	-ms-transform:perspective(800px) rotateX(60deg) translate(0,-70px);
-	transform:perspective(800px) rotateX(60deg) translate(0,-70px);
+	transform:perspective(800px) rotateX(90deg) translate(0,-70px);
 	-webkit-transition:2s all ease;
 	-moz-transition:2s all ease;
 	-ms-transition:2s all ease;
@@ -101,30 +408,173 @@
 
 @keyframes testContact{
 	from{background-position:0 0;}
-	to{background-position:500px 0;}
+	to{background-position:200px 0;}
 }
-#page #contact li{float: left; font:bold 20px/70px 'microsoft yahei'; margin-left: 40px;
-			color:#fff;
+@-webkit-keyframes testContact{
+	from{background-position:0 0;}
+	to{background-position:200px 0;}
 }
-#page #contact .l1{font-size: 30px; color:rgba(0,0,0,0.5); background-position: 0 0; animation: testContact 2s linear infinite;
-	background:-webkit-linear-gradient(-45deg,rgba(0,0,0,1) 50px,rgba(255,255,255,1) 70px,rgba(255,255,255,1) 70px,rgba(0,0,0,1) 80px);
-	background:-moz-linear-gradient(-45deg,rgba(0,0,0,1) 50px,rgba(255,255,255,1) 70px,rgba(255,255,255,1) 70px,rgba(0,0,0,1) 80px);
-	background:-ms-linear-gradient(-45deg,rgba(0,0,0,1) 50px,rgba(255,255,255,1) 70px,rgba(255,255,255,1) 70px,rgba(0,0,0,1) 80px);
-	background:linear-gradient(-45deg,rgba(0,0,0,1) 50px,rgba(255,255,255,1) 70px,rgba(255,255,255,1) 70px,rgba(0,0,0,1) 80px);
-	-webkit-background-clip:text;
-	-moz-background-clip:text;
-	-ms-background-clip:text;
-	background-clip:text;
+@-moz-keyframes testContact{
+	from{background-position:0 0;}
+	to{background-position:200px 0;}
 }
-/*h3*/
+
+@keyframes testContacte{
+	from{background-position:20px 0;}
+	to{background-position:220px 0;}
+}
+@-webkit-keyframes testContacte{
+	from{background-position:20px 0;}
+	to{background-position:220px 0;}
+}
+@-moz-keyframes testContacte{
+	from{background-position:20px 0;}
+	to{background-position:220px 0;}
+}
+#page #contact li{ font:bold 20px/46px 'microsoft yahei'; color:#fff;height: 46px; padding-left: 60px;margin-top:4px;margin-right: 30px;
+	/*-webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  	-moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  	-ms-animation: neon1 1.5s ease-in-out infinite alternate;
+  	animation: neon1 1.5s ease-in-out infinite alternate;*/
+}
+#page #contact .l2{background: url(images/contact.png) no-repeat 0px -46px; float: left; margin-left:60px; }
+#page #contact .l3{background: url(images/contact.png) no-repeat 0px -97px; float: left; /*margin-right: 5px;*/}
+#page #contact .l4{background: url(images/contact.png) no-repeat 0px 2px; float: left; }
+/*#page #contact .l1{float: left; width:65px; background:url(images/me.png); height: 150px; 
+*/
+/*h3字体 封装色*/
+
+
+
 #page .banner .btitle{width:400px; height: 200px; top: 100px; position: absolute; top:50%; left:30%;
 	
 }
-#page .banner .btitle h3{ height: 100px; width: 300px; color:#fff; font:100px/100px "microsoft yahei"; margin-bottom: -100px;
+@-webkit-keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff,0 0 20px  #fff,0 0 30px  #fff,0 0 40px  #FF1177,0 0 70px  #FF1177,0 0 80px  #FF1177,
+               0 0 100px #FF1177,
+               0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #FF1177,
+               0 0 35px #FF1177,
+               0 0 40px #FF1177,
+               0 0 50px #FF1177,
+               0 0 75px #FF1177;
+  }
+}
+@-moz-keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff,0 0 20px  #fff,0 0 30px  #fff,0 0 40px  #FF1177,0 0 70px  #FF1177,0 0 80px  #FF1177,
+               0 0 100px #FF1177,
+               0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #FF1177,
+               0 0 35px #FF1177,
+               0 0 40px #FF1177,
+               0 0 50px #FF1177,
+               0 0 75px #FF1177;
+  }
+}
+
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff,0 0 20px  #fff,0 0 30px  #fff,0 0 40px  #FF1177,0 0 70px  #FF1177,0 0 80px  #FF1177,
+               0 0 100px #FF1177,
+               0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #FF1177,
+               0 0 35px #FF1177,
+               0 0 40px #FF1177,
+               0 0 50px #FF1177,
+               0 0 75px #FF1177;
+  }
+}
+
+@keyframes neon3 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px  #fff,
+               0 0 30px  #c11,
+               0 0 40px  #c11,
+               0 0 70px  #c11,
+               0 0 80px  #f00,
+               0 0 100px #f00,
+               0 0 150px #f00;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #c11,
+               0 0 20px #c11,
+               0 0 35px #c11,
+               0 0 40px #f00,
+               0 0 50px #f00,
+               0 0 75px #f00;
+  }
+}
+@-moz-keyframes neon3 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px  #fff,
+               0 0 30px  #c11,
+               0 0 40px  #c11,
+               0 0 70px  #c11,
+               0 0 80px  #f00,
+               0 0 100px #f00,
+               0 0 150px #f00;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #c11,
+               0 0 20px #c11,
+               0 0 35px #c11,
+               0 0 40px #f00,
+               0 0 50px #f00,
+               0 0 75px #f00;
+  }
+}
+@-webkit-keyframes neon3 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px  #fff,
+               0 0 30px  #c11,
+               0 0 40px  #c11,
+               0 0 70px  #c11,
+               0 0 80px  #f00,
+               0 0 100px #f00,
+               0 0 150px #f00;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #c11,
+               0 0 20px #c11,
+               0 0 35px #c11,
+               0 0 40px #f00,
+               0 0 50px #f00,
+               0 0 75px #f00;
+  }
+}
+
+
+#page .banner .btitle h3{ height: 100px; width: 300px; color:#fff; font:200px/100px "Audiowide"; margin-bottom: -100px;
 	-webkit-transition: 3s all ease;
 	-moz-transition: 3s all ease;
 	-ms-transition: 3s all ease;
-	transition: 3s all ease;
+	transition: 1s all ease;
 	-webkit-transform:perspective(800px) rotateX(90deg);
 	-ms-transform:perspective(800px) rotateX(90deg);
 	-moz-transform:perspective(800px) rotateX(90deg);
@@ -133,9 +583,19 @@
 	-moz-transform-origin: bottom;
 	-ms-transform-origin: bottom;
 	transform-origin: bottom;
-	
+	/*-webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+  	-moz-animation: neon2 1.5s ease-in-out infinite alternate;
+  	-ms-animation: neon2 1.5s ease-in-out infinite alternate;
+  	animation: neon2 1.5s ease-in-out infinite alternate; 
+	*/
 }
-#page .banner .btitle p{height: 100px; width: 500px; color:#000; font:100px/100px "microsoft yahei"; 
+#page .banner .btitle h3:hover{
+	-webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  	-moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  	-ms-animation: neon1 1.5s ease-in-out infinite alternate;
+  	animation: neon1 1.5s ease-in-out infinite alternate;
+}
+/*#page .banner .btitle p{height: 100px; width: 500px; color:#000; font:100px/100px "microsoft yahei"; 
 	-webkit-transform:perspective(800px) scale(1,-1) rotateX(90deg);
 	-moz-transform:perspective(800px) scale(1,-1) rotateX(90deg);
 	-ms-transform:perspective(800px) scale(1,-1) rotateX(90deg);
@@ -149,70 +609,346 @@
 	-ms-transform-origin: bottom;
 	transform-origin: bottom;
 	/*-webkit-background-clip: text;*/
-	-webkit-mask:-webkit-linear-gradient(rgba(0,0,0,0) 40%,rgba(0,0,0,1));
+	/*-webkit-mask:-webkit-linear-gradient(rgba(0,0,0,0) 40%,rgba(0,0,0,1));
 	-moz-mask:-webkit-linear-gradient(rgba(0,0,0,0) 40%,rgba(0,0,0,1));
 	-ms-mask:-webkit-linear-gradient(rgba(0,0,0,0) 40%,rgba(0,0,0,1));
 	mask:-webkit-linear-gradient(rgba(0,0,0,0) 40%,rgba(0,0,0,1));
 }
-
-#page .banner #tmove{height:50px; width:50px; background: none; font:40px "microsoft yahei"; position: absolute; top:30%;}
-#page .banner #tmove span{display: block; float: left; width:50px; height: 50px; background: none; font:bold 50px/50px "microsoft yahei"; color:#fff;
-	-webkit-transition:3s all ease;
+*/
+#page .banner #tmove{height:100px; width:1550px; background: none; position: absolute; top:35%; left:10%;}
+#page .banner #tmove span{display: block; left:0px; width:50px; height: 50px; background: none; font:bold 50px/50px "PressStart"; color:#000;opacity: 0;
+	-webkit-animation: neon3 1.5s ease-in-out infinite alternate;
+  	-moz-animation: neon3 1.5s ease-in-out infinite alternate;
+  	-ms-animation: neon3 1.5s ease-in-out infinite alternate;
+  	animation: neon3 1.5s ease-in-out infinite alternate;
+	/*-webkit-transition:3s all ease;
 	-moz-transition:3s all ease;
 	-ms-transition:3s all ease;
-	transition:3s all ease;
-	-webkit-transform:translate(-100px,0);
+	transition:3s all ease;*/
+	/*-webkit-transform:translate(-100px,0);
 	-moz-transform:translate(-100px,0);
 	-ms-transform:translate(-100px,0);
-	transform:translate(-100px,0);
+	transform:translate(-100px,0);*/
+}
+/*#page .banner #tmove span:nth-child(1){transition:3s all ease;}*/
+
+
+
+
+
+
+
+/*content开始*/
+/*page2/
+/*简介/
+？
+/* produter下所有div的统一设置 */
+#page2{position: relative;
+  background:-webkit-radial-gradient(#ccc,#000);
+  background:-moz-radial-gradient(#ccc,#000);
+  background:-ms-radial-gradient(#ccc,#000)
+}
+.bredcolor{color:#fff;}
+.produter {width:300px; height:55px; position: absolute;top:10%;left:6%;
+	-webkit-perspective:400px;
+	-moz-perspective:400px;
+	perspective:400px;
+	-webkit-perspective-origin: 50% 100%;
+	-moz-perspective-origin: 50% 100%;
+	perspective-origin: 50% 100%;
+}
+.produter div {position:absolute; padding:30px 30px 30px 20px;  
+	-webkit-transform-style:preserve-3d;
+	-moz-transform-style:preserve-3d;
+	transform-style:preserve-3d;
+	top:100%; left:0; width:250px;
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	transform-origin: 0 0;
+}
+
+.produter .odd {background:#ddd;
+	-moz-transform:rotateX(0deg);
+	-webkit-transform:rotateX(0deg);
+		-webkit-transition: 1s;
+	-moz-transition: 1s;
+	-o-transition: 1s;
+	transition: 1s;
+}
+.produter .even {background:#eee;
+	-moz-transform:rotateX(0deg);
+	-webkit-transform:rotateX(0deg);
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	-o-transition: 1s;
+	transition: 1s;
+}
+.produter .first {background:#ddd;
+	-moz-transform:rotateX(0deg);
+	-webkit-transform:rotateX(0deg);
+	-ms-transform:rotateX(0deg);
+		-webkit-transition: 1s;
+	-moz-transition: 1s;
+	-o-transition: 1s;
+	transition: 1s;
+}
+.produter .last {background: url(images/contactbg.png) repeat-x; border-radius: 0 0 10px 10px; }
+.produter .last p span{color:#000;}
+/*.produter:hover .sub {
+
+	-moz-transform:rotateX(0deg);
+	-webkit-transform:rotateX(0deg);
+}*/
+/* .subactive {
+
+	-moz-transform:rotateX(0deg);
+	-webkit-transform:rotateX(0deg);
+}*/
+
+.produter .sub h3 {display:block; float:left; padding:0 10px 10px 0; width: 48px; height: 25px;}
+.produter .sub p {font: normal 18px/15px arial, sans-serif; color:#000; padding:0; margin:0;}
+.produter .sub p span {display:block; font: bold 14px/18px arial, sans-serif; color:#333;}
+.produter .last p span{color:#fff;}
+.produter .sub p a {font: normal 12px/15px arial, sans-serif; color:#09c;}
+.produter .sub p a:hover {text-decoration:none;}
+.produter a.main {display:block; font: bold 15px/55px arial, sans-serif; text-align:center; text-decoration:none; color:#fff; background:url(images/contactbg.png) repeat-x; border-radius:10px 10px 0 0; position:relative; z-index:100;}
+
+/*立方体*/
+.wrap {
+	width:400px;
+	height:400px;
+	position: absolute;top:15%;left:30%;
+	/*perspective: 1000px;*/
+	-webkit-transform:perspective(1000px);
+	-moz-transform:perspective(1000px);
+	/*perspective-origin: 50% 50%;*/
+	background-image: linear-gradient(135deg,#ccc 25%,#6699cc 25%,#6699cc 50%, #ccc 50%, #ccc 75%,#6699cc 75%,#6699cc 100%);
+	background-size: 80px 80px;
+	border-top: solid 3px #6699cc;
+	border-bottom: solid 3px #6699cc;
+	/* Background stripes animation */
+	-webkit-animation: bganim 3s linear 2s infinite;
+	-moz-animation: bganim 3s linear 2s infinite;
+}
+
+@-webkit-keyframes bganim {
+	from {background-position: 0px;}
+	to {background-position: 80px;}
+}
+@-moz-keyframes bganim {
+	from {background-position: 0px;}
+	to {background-position: 80px;}
+}
+
+.cube {
+	margin: 100px auto;
+	position: relative;
+	height: 200px;
+	width: 200px;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+}
+
+.cube div {
+	position: absolute;
+	padding: 10px;
+	box-sizing: border-box;
+	height: 100%;
+	width: 100%;
+	opacity: 0.8;
+	background-color: #000;
+	border: solid 1px #eee;
+	color: #fff;
+	font: 10px arial;
+	-webkit-transition: transform 0.2s ease-in;
+	-moz-transition: transform 0.2s ease-in;
+}
+
+.front {
+	background: #000;
+	transform: translateZ(100px);
+	-webkit-transform: translateZ(200px);
+	-moz-transform: translateZ(200px);
+}
+
+.back {
+	background: #000;
+	-webkit-transform: translateZ(-200px) rotateY(180deg);
+	-moz-transform: translateZ(-200px) rotateY(180deg);
+}
+
+.right {
+	background: #000;
+	-webkit-transform: rotateY(-270deg) translateZ(100px) translateX(100px);
+	-moz-transform: rotateY(-270deg) translateZ(100px) translateX(100px);
+	
+	-webkit-transform-origin: top right;
+	-moz-transform-origin: top right;
+}
+
+.left {
+	background: #000;
+	-webkit-transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+	-moz-transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+	
+	-webkit-transform-origin: center left;
+	-moz-transform-origin: center left;
+}
+
+.top {
+	background: #000;
+	-webkit-transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
+	-moz-transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
+	-webkit-transform-origin: top center;
+	-moz-transform-origin: top center;
+}
+
+.bottom {
+	background: #000;
+	-webkit-transform: rotateX(270deg) translateZ(100px) translateY(100px);
+	-moz-transform: rotateX(270deg) translateZ(100px) translateY(100px);
+	-webkit-transform-origin: bottom center;
+	-moz-transform-origin: bottom center;
+}
+/* inner cube */
+i{
+  position:absolute;color:#fff;text-align: center; font:20px/100px "microsoft yahei";
+  top:50px;
+  left:50px;
+  width:100px;
+  height:100px;
+  display:block;
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+}
+i.i_front{background:url(images/1.jpg); background-size:100% 100%;
+  -webkit-transform: translateZ(50px);
+  -moz-transform: translateZ(50px);
+}
+i.i_back{background:url(images/2.jpg); background-size:100% 100%;
+  -webkit-transform: translateZ(-50px) rotateY(180deg);
+  -moz-transform: translateZ(-50px) rotateY(180deg);
+}
+i.i_bottom{background:url(images/3.jpg); background-size:100% 100%;
+  -webkit-transform:rotateX(-90deg) translateY(50px);
+  -moz-transform:rotateX(-90deg) translateY(50px);
+  
+  -webkit-transform-origin: left bottom;
+  -moz-transform-origin: left bottom;
+}
+i.i_left{background:url(images/4.jpg); background-size:100% 100%;
+  -webkit-transform:rotateY(270deg) translateX(-50px);
+  -moz-transform:rotateY(270deg) translateX(-50px);
+  
+  -webkit-transform-origin: center left;
+  -moz-transform-origin: center left;
+}
+i.i_right{background:url(images/5.jpg); background-size:100% 100%;
+  -webkit-transform:rotateY(-270deg) translateX(50px);
+  -moz-transform:rotateY(-270deg) translateX(50px);
+  
+  -webkit-transform-origin: top right;
+  -moz-transform-origin: top right;
+}
+i.i_top{background:url(images/6.jpg); background-size:100% 100%;
+  -webkit-transform:rotateX(-270deg) translateY(-50px);
+  -moz-transform:rotateX(-270deg) translateY(-50px);
+  
+  -webkit-transform-origin: left top;
+  -moz-transform-origin: left top;
+}
+
+@-webkit-keyframes rotate {
+	from {
+		-webkit-transform: rotateX(0deg) rotateY(0deg);
+		-moz-transform: rotateX(0deg) rotateY(0deg);
+	}
+
+	to {
+		-webkit-transform: rotateX(360deg) rotateY(360deg);
+		-moz-transform: rotateX(360deg) rotateY(360deg);
+	}
+}
+@-moz-keyframes rotate {
+	from {
+		transform: rotateX(0deg) rotateY(0deg);
+		-moz-transform: rotateX(0deg) rotateY(0deg);
+	}
+
+	to {
+		transform: rotateX(360deg) rotateY(360deg);
+		-moz-transform: rotateX(360deg) rotateY(360deg);
+	}
+}
+
+.cube {
+	animation: rotate 20s infinite linear;
+	-moz-animation: rotate 20s infinite linear;
+	-webkit-transform: rotateX(60deg) rotateY(60deg);
+	-moz-transform: rotateX(60deg) rotateY(60deg);
+}
+.cube h2{font:bold 35px/80px "Audiowide"; text-align:center;}
+
+.wrap:hover .front {
+	-webkit-transform: translateZ(200px);
+	-moz-transform: translateZ(200px);
+}
+
+.wrap:hover .back {
+	-webkit-transform: translateZ(-200px) rotateY(180deg);
+	-moz-transform: translateZ(-200px) rotateY(180deg);
+}
+
+.wrap:hover .right {
+	-webkit-transform: rotateY(-270deg) translateZ(100px) translateX(100px);
+	-moz-transform: rotateY(-270deg) translateZ(100px) translateX(100px);
+}
+
+.wrap:hover .left {
+	-webkit-transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+	-moz-transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+}
+
+.wrap:hover .top {
+	-webkit-transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
+	-moz-transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
+}
+
+.wrap:hover .bottom {
+	-webkit-transform: rotateX(270deg) translateZ(100px) translateY(100px);
+	-moz-transform: rotateX(270deg) translateZ(100px) translateY(100px);
+}
+
+/*技能树*/
+#page .skill{width:20%; height:645px; background:#ccc; position: absolute; top:10%;left: 60%}
+/*page3*/
+
+#page3 .production{width:60%;background: none;height:600px;position: absolute;top:15%;left:20%;}
+#page3 .production li{width:50%; height:600px;float: left; 
+  transition:0.6s all ease;
+  -webkit-transition:0.6s all ease;
+  -moz-transition:0.6s all ease;
+  -ms-transition:0.6s all ease;
+}
+#page3 .production .l1{background:blue; }
+#page3 .production li a{width:100%;display: block;height:200px; font:40px "sans-serif"; text-align: center; line-height: 200px;color:#fff;transition: 0.5s all ease;
+  -webkit-transition: 0.5s all ease;
+  -moz-transition: 0.5s all ease;
+  -ms-transition: 0.5s all ease;
+}
+#page3 .production li a:hover{width:100%;display: block;height:200px; font:40px "sans-serif"; text-align: center; line-height: 100px;}
+iframe {position: absolute;top:15%;width:0px; left:50%; height:600px;
+  transition:0.6s all ease;
+  -webkit-transition:0.6s all ease;
+  -moz-transition:0.6s all ease;
+  -ms-transition:0.6s all ease;
+}
+
+#page3 .close{position:absolute;top:15%; left:50%;  width:50px; height: 50px; margin-left: -25px; background: #fff;
+    font:bold 40px/50px "miscrosoft yahei"; border-radius: 50%; display: none;
 }
 
 
-/*snow*/
-
-#snowzone{position: fixed; top:0px;}
-@keyframes mysnow{ 
-	0%{ bottom:100%; opacity:0; } 
-	50%{ opacity:1; transform: rotate(1080deg); } 
-	100%{ transform: rotate(0deg); opacity: 0; bottom:0; } 
-} 
-@-webkit-keyframes mysnow{ 
-	0%{ bottom:100%; opacity:0; } 
-	50%{ opacity:1; -webkit-transform: rotate(1080deg); } 
-	100%{ -webkit-transform: rotate(0deg); opacity: 0; bottom:0; } 
-} 
-@-moz-keyframes mysnow{ 
-	0%{ bottom:100%; opacity:0; } 
-	50%{ opacity:1; -moz-transform: rotate(1080deg); } 
-	100%{ -moz-transform: rotate(0deg); opacity: 0; bottom:0; } 
-} 
-@-ms-keyframes mysnow{ 
-	0%{ bottom:100%; opacity:0; }
-	50%{ opacity:1; -ms-transform: rotate(1080deg); } 
-	100%{ -ms-transform: rotate(0deg); opacity: 0; bottom:0; } 
-} 
-@-o-keyframes mysnow{ 
-	0%{ bottom:100%; opacity:0; } 
-	50%{ opacity:1; -o-transform: rotate(1080deg); } 
-	100%{ -o-transform: rotate(0deg); opacity: 0; bottom:0; } 
-} 
-#snowzone .roll{ 
-	position:absolute; 
-	opacity:0; 
-	animation: mysnow 5s ; 
-	-webkit-animation: mysnow 5s ; 
-	-moz-animation: mysnow 5s ; 
-	-ms-animation: mysnow 5s ; 
-	animation: mysnow 5s ; 
-	height:80px; 
-} 
-#snowzone .div{ 
-	position:fixed; 
-} 
-
-/*snow*/
-
-/*content开始*/
 
 
 </style>
@@ -249,10 +985,10 @@ window.onload=function(){
 	function nStyle(){
 		for(var i=0;i<aNav_a.length;i++){
 			aNav_a[i].className = '';
-			aNav_a[i].style.boxShadow = ''+5+'px '+3+'px '+10+'px yellow';
+			aNav_a[i].style.boxShadow = ''+5+'px '+3+'px '+10+'px #ccc';
 		}
 		aNav_a[count].className = 'active';
-		aNav_a[count].style.boxShadow = ''+5+'px '+3+'px '+10+'px '+10+'px yellow';
+		aNav_a[count].style.boxShadow = ''+5+'px '+3+'px '+10+'px '+10+'px #ccc';
 		
 	}
 
@@ -267,7 +1003,7 @@ window.onload=function(){
 					count++;
 					l=-count*aPage[0].offsetHeight;
 					nStyle();
-					move(oPage,{top:l},{time:1000,fn:function(){
+					move(oPage,{top:l},{time:1500,fn:function(){
 						bSocll = false;
 					}});
 
@@ -281,12 +1017,12 @@ window.onload=function(){
 					l=-count*aPage[0].offsetHeight;
 					nStyle();
 					
-					move(oPage,{top:l},{time:1000,fn:function(){
+					move(oPage,{top:l},{time:1500,fn:function(){
 						bSocll = false;
-						 	  if(oPage.offsetTop == 0){
-						 	  	clearInterval(timer);
-						 	 	setSnow();
-						 	  }			
+						 	  // if(oPage.offsetTop == 0){
+						 	  // 	clearInterval(timer);
+						 	 	// setSnow();
+						 	  // }			
 					}});
 
 				}
@@ -303,15 +1039,15 @@ window.onload=function(){
 			aNav_a[i].onclick = function(){
 				for(var i = 0;i<aNav_a.length;i++){
 					aNav_a[i].className = '';
-					aNav_a[i].style.boxShadow = ''+5+'px '+3+'px '+10+'px yellow';
+					aNav_a[i].style.boxShadow = ''+5+'px '+3+'px '+10+'px #ccc';
 				}
 				this.className = 'active'
-				this.style.boxShadow = ''+5+'px '+3+'px '+10+'px '+10+'px yellow';
-				move(oPage,{top:-index*aPage[0].offsetHeight},{time:1000,fn:function(){
-					   if(oPage.offsetTop == 0){
-					   		clearInterval(timer);
-						   setSnow();
-					   }	
+				this.style.boxShadow = ''+5+'px '+3+'px '+10+'px '+10+'px #ccc';
+				move(oPage,{top:-index*aPage[0].offsetHeight},{time:1500,fn:function(){
+					   // // if(oPage.offsetTop == 0){
+					   // // 		clearInterval(timer);
+						  // //  setSnow();
+					   // }	
 				}});	
 			}
 
@@ -324,72 +1060,99 @@ window.onload=function(){
 	var aTspan = oTmove.getElementsByTagName('span');
 	var oH3 = document.getElementById('btitle_h');
 	var oP = document.getElementById('btitle_p');
+	var oBanner = document.getElementById('ban');
 	
-	oContact.style.transform = 'perspective('+800+'px) rotateX('+(-390)+'deg) translate('+0+','+(-5)+'px)';
-	var jspan = 0;
-	for (var i = 0; i < aTspan.length; i++) {
+	
+	oBanner.style.transform = 'perspective('+1000+'px) rotateX('+0+')';
 
-		aTspan[i].style.transform = 'translate('+(100+jspan*60)+'px,0)'
-		aTspan[i].style.webkitTransform = 'translate('+(100+jspan*60)+'px,0)'
-		aTspan[i].style.mozTransform = 'translate('+(100+jspan*60)+'px,0)'
-		aTspan[i].style.msTransform = 'translate('+(100+jspan*60)+'px,0)'
-		jspan++;
-	}
-	oH3.style.webkitTransform = 'perspective('+800+'px) rotateX('+30+'deg)';
-	oH3.style.mozTransform = 'perspective('+800+'px) rotateX('+30+'deg)';
-	oH3.style.msTransform = 'perspective('+800+'px) rotateX('+30+'deg)';
-	oH3.style.transform = 'perspective('+800+'px) rotateX('+30+'deg)';
-	oP.style.webkitTransform = 'perspective('+800+'px) scale('+1+','+(-1)+') rotateX('+30+'deg)';
-	oP.style.mozTransform = 'perspective('+800+'px) scale('+1+','+(-1)+') rotateX('+30+'deg)';
-	oP.style.msTransform = 'perspective('+800+'px) scale('+1+','+(-1)+') rotateX('+30+'deg)';
-	oP.style.transform = 'perspective('+800+'px) scale('+1+','+(-1)+') rotateX('+30+'deg)';
+	var timer3 = setTimeout(function(){
+		oContact.style.transform = 'perspective('+800+'px) rotateX('+(-360)+'deg) translate('+0+','+(-5)+'px)';
+		for (var i = aTspan.length - 1; i >= 0; i--) {
+			aTspan[i].style.left = i*60+'px';
+		}
+		var t_index = 0
+		var timer4 = setInterval(function(){
+			aTspan[t_index].style.opacity = 1;
+			t_index++;
+			if(t_index == aTspan.length){
+				clearTimeout(timer4);
+		}
+	},300)
+		oH3.style.webkitTransform = 'perspective('+800+'px) rotateX('+30+'deg)';
+		oH3.style.mozTransform = 'perspective('+800+'px) rotateX('+30+'deg)';
+		oH3.style.msTransform = 'perspective('+800+'px) rotateX('+30+'deg)';
+		oH3.style.transform = 'perspective('+800+'px) rotateX('+30+'deg)';
+		clearTimeout(timer3);
+	},2000)
+	
+	
+	
+	// var bKey = true;
+	// oBanner.onclick = function(){
+	// 		oBanner.style.transformOrigin = ''+2000+'px'
+	// 		oBanner.style.webkitTransformOrigin = ''+2000+'px'
+	// 		oBanner.style.mozTransformOrigin = ''+2000+'px'
+	// 		oBanner.style.msTransformOrigin = ''+2000+'px'
+	// 	if(bKey){
+	// 		oBanner.style.transform = 'perspective('+800+'px) rotateX('+70+'deg)';
+	// 		oBanner.style.webkitTransform = 'perspective('+800+'px) rotateX('+70+'deg)';
+	// 		oBanner.style.mozTransform = 'perspective('+800+'px) rotateX('+70+'deg)';
+	// 		oBanner.style.msTransform = 'perspective('+800+'px) rotateX('+70+'deg)';
+	// 		bKey = false;
+	// 	}else{
+	// 		oBanner.style.transform = 'perspective('+1000+'px) rotateX('+0+'deg)';
+	// 		oBanner.style.webkitTransform = 'perspective('+1000+'px) rotateX('+0+'deg)';
+	// 		oBanner.style.mozTransform = 'perspective('+1000+'px) rotateX('+0+'deg)';
+	// 		oBanner.style.msTransform = 'perspective('+1000+'px) rotateX('+0+'deg)';
+	// 		bKey = true;
+	// 	}
 
+	// }
 
 
 //snow
 
-var timer = null;
-	setSnow()
-	function setSnow(){
-		clearInterval(timer);
-		function snow(){ 
-			var oSnow = document.getElementById('snowzone')
-			var div = document.createElement("div"); 
-			var img = document.createElement("img"); 
-			var left = Math.random()*window.innerWidth; 
-			var height = Math.random()*window.innerHeight; 
-			var src = "images/s"+0+".png";//两张图片分别为"s1.png"、"s2.png" 
-			var sca = Math.random()*30+5
-			div.appendChild(img); 
-			img.style.width = (Math.random()*20+5)+'px';
-			img.style.height = img.style.width;
-			img.className = "roll"; 
-			img.src = src; 
-			div.style.left=left+"px"; 
-			div.style.height=height+"px"; 
-			div.className="div"; 
-			document.getElementById("snowzone").appendChild(div); 
-		}
-
-				setTimeout(function(){ 
-					oSnow.removeChild(div); 
-			// console.log(window.innerHeight); 
-				},5000); 
-
+// var timer = null;
+// 	setSnow()
+// 	function setSnow(){
+// 		clearInterval(timer);
+// 		function snow(){ 
+// 			var oSnow = document.getElementById('snowzone')
+// 			var div = document.createElement("div"); 
+// 			var img = document.createElement("img"); 
+// 			var left = Math.random()*window.innerWidth; 
+// 			var height = Math.random()*window.innerHeight; 
+// 			var src = "images/s"+parseInt(Math.random()*3)+".png";//两张图片分别为"s1.png"、"s2.png" 
+// 			//var sca = Math.random()*30+5
+// 			div.appendChild(img); 
+// 			// img.style.width = (Math.random()*20+5)+'px';
+// 			// img.style.height = img.style.width;
+// 			img.className = "roll"; 
+// 			img.src = src; 
+// 			div.style.left=left+"px"; 
+// 			div.style.height=height+"px"; 
+// 			div.className="div"; 
+// 			document.getElementById("snowzone").appendChild(div); 
 			
+// 			var timer2 = setTimeout(function(){ 
+// 				oSnow.removeChild(div); 
+// 				clearTimeout(timer2);
+// 		// console.log(window.innerHeight); 
+// 			},5000); 
+// 		}	
 		
-			timer = setInterval(function(){ 
-				// var left = Math.random()*window.innerWidth; 
-				// var height = Math.random()*window.innerHeight; 
-				// var src = "img/s"+Math.floor(Math.random()*2+1)+".png";//两张图片分别为"s1.png"、"s2.png" 
-				snow(); 
-				if(oPage.offsetTop!=0){
-	 				clearInterval(timer);
+// 			timer = setInterval(function(){ 
+// 				// var left = Math.random()*window.innerWidth; 
+// 				// var height = Math.random()*window.innerHeight; 
+// 				// var src = "img/s"+Math.floor(Math.random()*2+1)+".png";//两张图片分别为"s1.png"、"s2.png" 
+// 				snow(); 
+// 				if(oPage.offsetTop!=0){
+// 	 				clearInterval(timer);
 
-	 			}
+// 	 			}
 
-			},20); 
-	}
+// 			},500); 
+// 	}
 			
  
 
@@ -470,22 +1233,98 @@ var timer = null;
 			iNow++
 		};
 		if(iNow%2==0){
-			oClock.style.boxShadow=''+0+'px '+0+'px '+(cNow)+'px '+(cNow/2)+'px rgb('+cNow*2+','+cNow*2+',0)';
+			oClock.style.boxShadow=''+0+'px '+0+'px '+(cNow)+'px '+(cNow/2)+'px rgb('+cNow*2+','+cNow*2+','+cNow*2+')';
 			oH.style.boxShadow =''+0+'px '+0+'px '+(cNow/2)+'px #000';
 	 		oM.style.boxShadow =''+0+'px '+0+'px '+(cNow/2)+'px #000';
-	 		oS.style.boxShadow =''+0+'px '+0+'px '+(cNow/2)+'px yellow';
-	 		oBg.style.opacity = cNow/100;
+	 		oS.style.boxShadow =''+0+'px '+0+'px '+(cNow/2)+'px #000';
 	 	}else{
-	 		oClock.style.boxShadow=''+0+'px '+0+'px '+(50-cNow)+'px '+(25-cNow/2)+'px rgb('+(100-cNow*2)+','+(100-cNow*2)+',0)';
+	 		oClock.style.boxShadow=''+0+'px '+0+'px '+(50-cNow)+'px '+(25-cNow/2)+'px rgb('+(100-cNow*2)+','+(100-cNow*2)+','+(100-cNow*2)+')';
 			oH.style.boxShadow =''+0+'px '+0+'px '+(25-cNow/2)+'px #000';
 	 		oM.style.boxShadow =''+0+'px '+0+'px '+(25-cNow/2)+'px #000';
-	 		oS.style.boxShadow =''+0+'px '+0+'px '+(25-cNow/2)+'px yellow';
-	 		oBg.style.opacity = 0.5-cNow/50;
+	 		oS.style.boxShadow =''+0+'px '+0+'px '+(25-cNow/2)+'px #000';
 	 	}
 
 	},90)
 
+
+
+
+//page2 信息
+	var oProduter = document.querySelector("produter");
+	var oMain = document.getElementById("proMain");
+	var oSub = document.getElementById('first');
+	var oSub1 = document.getElementById('odd');
+	var oSub2 = document.getElementById('even');
+	var oSub3 = document.getElementById('even2');
+	var oSub4 = document.getElementById('last');
+	oMain.onclick = function(){
+		//alert(oSub)
+		oSub.style.transform=oSub1.style.transform=oSub2.style.transform=oSub3.style.transform=oSub4.style.transform="rotateX("+0+"deg)"
+	}
+	oSub4.onclick = function(){
+		oSub.style.webkitTransform="rotateX("+(-100)+"deg)"
+		oSub.style.mozTransform="rotateX("+(-100)+"deg)"
+		oSub.style.mozTransform="rotateX("+(-100)+"deg)"
+		oSub1.style.webkitTransform="rotateX("+(-180)+"deg)"
+		oSub1.style.Transform="rotateX("+(-180)+"deg)"
+		oSub1.style.mozTransform="rotateX("+(-180)+"deg)"
+		oSub2.style.mozTransform=oSub3.style.mozTransform="rotateX("+180+"deg)"
+		oSub2.style.webkitTransform=oSub3.style.webkitTransform="rotateX("+180+"deg)"
+		oSub2.style.transform=oSub3.style.transform="rotateX("+180+"deg)"
+		oSub4.style.webkitTransform="rotateX("+(-180)+"deg)"
+		oSub4.style.Transform="rotateX("+(-180)+"deg)"
+		oSub4.style.mozTransform="rotateX("+(-180)+"deg)"
+		
+	};
+
+  //page3作品展示
+
+  var oPro = document.getElementById('pro');
+  var aLpro = oPro.children;
+  var aHref = oPro.getElementsByTagName("a");
+  var oIframe = document.getElementById("display")
+  var oAc = document.getElementById("aclose")
+  var arr = ["sub/3D图片环.html","sub/官方选项展示.html","sub/屏保.html","sub/瀑布流.html","sub/chrome应用商店.html","sub/canvas时钟.html"]
+  function tab(){
+    oIframe.style.width = 900+"px";
+    oIframe.style.transform = "translate("+(-450)+"px,"+0+")";
+    aLpro[0].style.transform = "translate("+(-450)+"px,"+0+")";
+    aLpro[1].style.transform = "translate("+(450)+"px,"+0+")";
+    oAc.style.display = "block";
+
+  }
+  for(var i =0;i<aHref.length;i++){
+    (function(index){
+      aHref[i].onclick=function(){
+        //alert(arr[1])
+        tab();
+        
+        oIframe.src=arr[index];
+        
+      }
+    })(i)
+  }
+  oAc.onclick = function(){
+    oAc.style.display = "none";
+    aLpro[0].style.transform = "translate("+0+"px,"+0+")";
+    aLpro[1].style.transform = "translate("+0+"px,"+0+")";
+    oIframe.style.transform = "translate("+0+"px,"+0+")";
+    oIframe.src = "";
+    oIframe.style.width=0;
+
+
+  }
+
+
+
+
+
+
+
 };
+
+
+
 </script>	
 </head>
 <body>
@@ -495,10 +1334,24 @@ var timer = null;
 	
 			<div id="page1">
 				<!-- header开始 -->
+				<!-- <div class='containerbox'> -->
+				    <div class='person'>
+				        <div class='head'></div>
+				        <div class='part arm one'></div>
+				        <div class='part arm two'></div>
+				        <div class='torso'></div>
+				        <div class='part leg one'></div>
+				        <div class='part foot one'></div>
+				        <div class='part leg two'></div>
+				        <div class='part foot two'></div>
+				    </div>
+				<!-- <div> -->
+					
+
 				
-				<div class="banner">
-					<div id="snowzone"> 
-					</div> 
+				<div class="banner" id="ban">
+					
+					
 					<div id="clock">
 						<div id="bgcolor"></div>
 						<div id="hou"></div>
@@ -508,26 +1361,25 @@ var timer = null;
 					</div>
 					<div class="btitle">
 						<h3 id="btitle_h">Welcome!</h3>
-						<p id="btitle_p">Welcome!</p>
 					</div>
 					<div class="clearfix" id="tmove">
-					<span>JS</span><span>之</span><span>魅</span><span>力</span><span></span>
-					<span>如</span><span>若</span><span>这</span><span>绚</span><span>丽</span><span>之</span><span>空</span>
+						<span>一</span><span>位</span><span>热</span><span>衷</span><span>于</span><span>前</span><span>端</span>
+						<span>开</span><span>发</span><span>技</span><span>术</span><span>的</span><span>年</span><span>轻</span><span>人</span>
 					</div>
 				</div>
 
 				<div class="nav">
 					<ul>
 						<li><a href="javascript:;" class="a1">首页</a></li>
-						<li><a href="javascript:;">简介</a></li>
 						<li><a href="javascript:;">技能</a></li>
 						<li><a href="javascript:;">作品</a></li>
+						<li><a href="javascript:;">简介</a></li>
 					</ul>
 				</div>
 				<ul id="contact" class="clearfix">
-					<li class="l1">Contact me</li>
-					<li class="l2">Mobile: 15901833417</li>
-					<li class="l3">E-mail: www.xu00ming@sina.com</li>
+					<li class="l2">15901833417</li>
+					<li class="l3">www.xu00ming@sina.com</li>
+					<li class="l4">1040229813</li>
 				</ul>
 
 
@@ -537,12 +1389,88 @@ var timer = null;
 
 
 			<!-- content开始 -->
-			<div id="page2" style="width:100%;background:red;opacity:0.1"></div>
+			<div id="page2" style="width:100%;background:-webkit-radial-gradient(#ccc,#000)">
+				<div class="produter"><a id="proMain" class="main" href="#url">个人信息(点击展开)</a>
+					<div id="first" class="sub first"><h3 style="width:115px;height:140px;background:url(images/me.png)"></h3><p><span style="width:100px;float:right;"><br/><br/>Name: 徐明<br/><br/>age: 22</span></p>
+					<div id="even" class="sub even"><h3>姓名:</h3><p><span>徐明</span></p>
+							<div id="odd" class="sub odd"><h3>学历:</h3><p><span>本科</span></p>
+								<div id="even2" class="sub even"><h3>xxx</h3><p><span>xxx</span></p>
+									<div id="last" class="sub odd last"><a href="javascript:;"><h3>xxxx</h3><p><span>点击收起</span></p></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 立方体 -->
+				<div class="wrap">
+		            <div class="cube">
+		                <div class="front">
+		                    <h2>Javascript<br/>80%</h2>
+		                </div>
+		                <div class="back">
+		                    <h2>Html/Css<br/>100%</h2>
+		                </div>
+		                <div class="top">
+		                    <h2>Html5/Css3<br/>90%</h2>
+		                </div>
+		                <div class="bottom">
+		                    <h2>Angular.js<br/>40%</h2>
+		                </div>
+		                <div class="left">
+		                    <h2>Ajax<br/>70%</h2>
+		                </div>
+		                <div class="right">
+		                    <h2>MVC<br/>50%</h2>
+		                </div>
+		                <i class="i_front">性能</i>
+		                <i class="i_back">维护</i>
+		                <i class="i_top">成本</i>
+		                <i class="i_bottom">结构</i>
+		                <i class="i_left">兼容</i>
+		                <i class="i_right">效率</i>
+		            </div>
+	       		</div>
+
+	       		<div class="skill">
+					<div style="width:64px;height:64px;background:url(images/html1.png);position:absolute;left:10%;top:10%"></div>
+					<div style="width:64px;height:64px;background:url(images/html2.png);position:absolute;left:40%;top:10%"></div>
+					<div style="width:64px;height:64px;background:url(images/html3.png);position:absolute;left:70%;top:10%"></div>
+					<div style="width:80%;height:60%;background:#666;position:absolute;top:30%;left:10%">
+						<br/>
+						<h3>当然除了样式 结构 方法三大体系之外</h3>
+						<p>xxxxxx</p>
+						<p>xxxxx</p>
+						<p>xxxxxx</p>
+						<p>xxxxx</p>
+					</div>
+	       		</div>
+
+
+			</div>
 			
-			<div id="page3" style="width:100%;background:green"></div>
+			<div id="page3" style="width:100%;background:url(images/pagebg2.png);position:relative;">
+        <ul id="pro" class="production">
+          <li class="l1">
+            <a href="javascript:;" style="background:#363558">3D图片环</a>
+            <a href="javascript:;" style="background:#dadcdc">官网选项展示</a>
+            <a href="javascript:;" style="background:#3a739b">屏保</a>
+          </li>
+          <li class="l2">
+            <a href="javascript:;" style="background:#544173">瀑布流</a>
+            <a href="javascript:;" style="background:#65d29b">chrome应用商店</a>
+            <a href="javascript:;" style="background:#056254">canvas时钟</a>
+          </li>
+        </ul>
+        <iframe id="display" style="background: #000;border:none;margin: 0;" >
+      </iframe>
+      <a id="aclose" class="close" href="javascript:;">X</a>	
+			</div>
 			<!-- content结束 -->
 			<!-- footer开始 -->
-			<div id="page4" style="width:100%;background:yellow"></div>
+			<div id="page4" style="width:100%;background:rgba(250,30,120,0.5)">
+        <audio src="mp3/pacific.mp3" loop autoplay></audio>
+      </div>
 			<!-- footer结束 -->
 		</div>
 	</div>

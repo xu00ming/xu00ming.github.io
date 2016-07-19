@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>瀑布流</title>
+<style>
+*{ margin:0; padding:0; list-style:none; font-family: "微软雅黑";}
+body{height:0;}
+#div1{width:930px;background:red; overflow: _hidden; margin:0 auto;}
+#div1 ul{width:300px; float:left;margin-right:10px; background:#ccc;}
+#div1 ul li{/*height:300px;*/ background:#333; margin-bottom:20px;}
+img{width:100%;height: 100%}
+
+</style>
+<script>
+window.onload=function(){
+	var oDiv=document.getElementById('div1');
+	var aUl=oDiv.children;
+	//1 createLi	创建高度随机的li(根据图片高度自适应)
+	function createLi(){
+		var oLi=document.createElement('li');
+		oLi.style.height=parseInt(100+Math.random()*(300-100))+'px';
+		oLi.innerHTML = '<img src="img/'+parseInt(Math.random()*8)+'.jpg" />'
+		return oLi;
+	}
+	
+	//3.	插一批
+	function insertToUl(count){
+		for(var j=0;j<count;j++){
+			var arr=[];
+			for(var i=0;i<aUl.length;i++){
+				arr.push(aUl[i]);
+			}
+			arr.sort(function(ul1,ul2){return ul1.offsetHeight-ul2.offsetHeight});
+			
+			arr[0].appendChild(createLi());
+		}	
+	}
+	//4.	onload/onsrcoll到最底部时，再插一批
+	insertToUl(15);
+	window.onscroll=function(){
+		var scrTop=document.documentElement.scrollTop||document.body.scrollTop;
+		var clientH=document.documentElement.clientHeight;
+		var bodyH=document.body.scrollHeight;
+		if(scrTop+clientH>=bodyH){
+			//alert('到底了');
+			insertToUl(5);	
+		}
+	};
+};
+</script>
+</head>
+
+<body>
+
+<div id="div1">
+	<ul></ul>
+	<!-- <img src="img/0.jpg"> -->
+	<ul></ul>
+	<ul></ul>
+</div>
+
+</body>
+</html>
